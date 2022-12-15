@@ -1,0 +1,22 @@
+[
+    {"id": 1, "nombre": "Camiseta Barca", "talle": "S", "precio": 1200, "imagen": "camibar"},
+    {"id": 2, "nombre": "Camiseta Barca", "talle": "M", "precio": 1350, "imagen": "camibar"},
+    {"id": 3, "nombre": "Camiseta Barca", "talle": "L", "precio": 1420, "imagen": "camibar"},
+    {"id": 4, "nombre": "Camiseta Real Madrid", "talle": "S", "precio": 1200, "imagen": "camireal"},
+    {"id": 5, "nombre": "Camiseta Real Madrid", "talle": "M", "precio": 1350, "imagen": "camireal"},
+    {"id": 6, "nombre": "Camiseta Real Madrid", "talle": "L", "precio": 1420, "imagen": "camireal"},
+    {"id": 7, "nombre": "Camiseta Bayern Munchen", "talle": "S", "precio": 1200, "imagen": "camibay"},
+    {"id": 8, "nombre": "Camiseta Bayern Munchen", "talle": "M", "precio": 1350, "imagen": "camibay"},
+    {"id": 9, "nombre": "Camiseta Bayern Munchen", "talle": "L", "precio": 1420, "imagen": "camibay"},
+    {"id": 10, "nombre": "Camiseta Man United", "talle": "S", "precio": 1200, "imagen": "camimanu"},
+    {"id": 11, "nombre": "Camiseta Man United", "talle": "M", "precio": 1350, "imagen": "camimanu"},
+    {"id": 12, "nombre": "Camiseta Man United", "talle": "L", "precio": 1420, "imagen": "camimanu"},
+    {"id": 13, "nombre": "Camiseta Juventus", "talle": "S", "precio": 1420, "imagen": "camijuventus"},
+    {"id": 14, "nombre": "Camiseta Juventus", "talle": "M", "precio": 1350, "imagen": "camijuventus"},
+    {"id": 15, "nombre": "Camiseta Juventus", "talle": "L", "precio": 1200, "imagen": "camijuventus"},
+    {"id": 16, "nombre": "Camiseta PSG", "talle": "S", "precio": 1200, "imagen": "camipsg2"},
+    {"id": 17, "nombre": "Camiseta PSG", "talle": "M", "precio": 1350, "imagen": "camipsg2"},
+    {"id": 18, "nombre": "Camiseta PSG", "talle": "L", "precio": 1420, "imagen": "camipsg2"}
+    
+] 
+
