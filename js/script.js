@@ -22,19 +22,23 @@ const consultarProductos = async () => {
 
 // Agrego los elementos al DOM
 
-const listaCamisetas = [consultarProductos()]
+const listaCamisetas = []
 const divProductos = document.getElementById("divProductos")
 
+const carrito = JSON.parse(localStorage.getItem("carrito")) || []
+
 consultarProductos().then(productos => {
+    const listaCamisetas = productos
     productos.forEach(producto => {
         divProductos.innerHTML +=
             '<div id="' + producto.id + '" class="card card-prod"><img height="300px" src="./assets/img/' + producto.imagen + '.png" class="card-img-top"> <div class="card-body"> <h4 class=card-title">' + producto.nombre + ' Talle: ' + producto.talle + '</h4> <p class="card-text">' + producto.precio + '</p> <button id=' + producto.id + ' class="btn btn-primary">Agregar</button> </div></div>'
     })
 
     const botonAgregar = document.querySelectorAll(".btn-primary")
+
     botonAgregar.forEach(boton => {
         boton.onclick = () => {
-            console.log("hola")
+    
             const productoSeleccionado = listaCamisetas.find(prod => prod.id === parseInt(boton.id))
     
             const productosCarrito = {
@@ -69,7 +73,7 @@ consultarProductos().then(productos => {
     })
 })
     
-    console.log(listaCamisetas)
+
 
 //Creo el array con los productos
 // const listaCamisetas = [];
@@ -101,7 +105,7 @@ consultarProductos().then(productos => {
 
 
 //Carrito
-const carrito = JSON.parse(localStorage.getItem("carrito")) || []
+
 
 
 
