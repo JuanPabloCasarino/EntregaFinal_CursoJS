@@ -20,7 +20,7 @@ const consultarProductos = async () => {
     return productos
 }
 
-// Agrego los elementos al DOM
+// Agrego los elementos al DOM y doy funcionalidad al boton agregar
 
 const listaCamisetas = []
 const divProductos = document.getElementById("divProductos")
@@ -28,6 +28,7 @@ const divProductos = document.getElementById("divProductos")
 const carrito = JSON.parse(localStorage.getItem("carrito")) || []
 
 consultarProductos().then(productos => {
+    
     const listaCamisetas = productos
     productos.forEach(producto => {
         divProductos.innerHTML +=
@@ -35,7 +36,6 @@ consultarProductos().then(productos => {
     })
 
     const botonAgregar = document.querySelectorAll(".btn-primary")
-
     botonAgregar.forEach(boton => {
         boton.onclick = () => {
     
@@ -72,44 +72,7 @@ consultarProductos().then(productos => {
         }
     })
 })
-    
-
-
-//Creo el array con los productos
-// const listaCamisetas = [];
-// listaCamisetas.push(new camisetas(1, "Camiseta Barca", "S", 1200, "camibar"));
-// listaCamisetas.push(new camisetas(2, "Camiseta Barca", "M", 1260, "camibar"));
-// listaCamisetas.push(new camisetas(3, "Camiseta Barca", "L", 1480, "camibar"));
-// listaCamisetas.push(new camisetas(4, "Camiseta Real Madrid", "S", 1490, "camireal"));
-// listaCamisetas.push(new camisetas(5, "Camiseta Real Madrid", "M", 1590, "camireal"));
-// listaCamisetas.push(new camisetas(6, "Camiseta Real Madrid", "L", 1670, "camireal"));
-// listaCamisetas.push(new camisetas(7, "Camiseta Bayern Munchen", "S", 1080, "camibay"));
-// listaCamisetas.push(new camisetas(8, "Camiseta Bayern Munchen", "M", 1330, "camibay"));
-// listaCamisetas.push(new camisetas(9, "Camiseta Bayern Munchen", "L", 1400, "camibay"));
-// listaCamisetas.push(new camisetas(10, "Camiseta Man United", "S", 1200, "camimanu"));
-// listaCamisetas.push(new camisetas(11, "Camiseta Man United", "M", 1550, "camimanu"));
-// listaCamisetas.push(new camisetas(12, "Camiseta Man United", "L", 1600, "camimanu"));
-// listaCamisetas.push(new camisetas(13, "Camiseta Juventus", "S", 1100, "camijuventus"));
-// listaCamisetas.push(new camisetas(14, "Camiseta Juventus", "M", 1100, "camijuventus"));
-// listaCamisetas.push(new camisetas(15, "Camiseta Juventus", "L", 1300, "camijuventus"));
-// listaCamisetas.push(new camisetas(16, "Camiseta PSG", "S", 1000, "camipsg2"));
-// listaCamisetas.push(new camisetas(17, "Camiseta PSG", "M", 1100, "camipsg2"));
-// listaCamisetas.push(new camisetas(18, "Camiseta PSG", "L", 1230, "camipsg2"));
-
-//Agregar elementos al Dom
-// const divProductos = document.getElementById("divProductos")
-// listaCamisetas.forEach(producto => {
-//     divProductos.innerHTML +=
-//         '<div id="' + producto.id + '" class="card card-prod"><img height="300px" src="./assets/img/'+producto.imagen+'.png" class="card-img-top"> <div class="card-body"> <h4 class=card-title">' + producto.nombre + ' Talle: ' + producto.talle + '</h4> <p class="card-text">' + producto.precio + '</p> <button id=' + producto.id + ' class="btn btn-primary">Agregar</button> </div></div>'
-// })
-
-
-//Carrito
-
-
-
-
-
+   
 
 //Boton finalizar total
 const botonFinalizar = document.querySelector("#finalizar")
@@ -122,7 +85,7 @@ botonFinalizar.onclick = () => {
 
     let totalLlevar = "Vas a llevar: "
     for (itemsElegidos of carrito) {
-        totalLlevar += "\n -" + itemsElegidos.nombre + " Talle " + itemsElegidos.talle
+        totalLlevar += "\n -" + itemsElegidos.nombre+ " Talle " + itemsElegidos.talle+ ", cantidad: " + itemsElegidos.cantidad 
     }
 
     if (totalCompra === 0) {
